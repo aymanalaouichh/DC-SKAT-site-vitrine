@@ -26,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ─── HEADER SCROLL SHADOW ────────────────────────────
+  const header = document.querySelector('.header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
   // ─── LIEN ACTIF DANS LA NAV ──────────────────────────
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav a, .nav-mobile a').forEach(link => {

@@ -18,69 +18,51 @@
   <!-- CSS spécifique Contact -->
   <style>
 
-    /*  HERO  */
+    /* ─── HERO ──────────────────────────────────────────── */
     .page-hero {
-      background: linear-gradient(135deg, var(--vert-dark) 0%, var(--vert) 100%);
-      color: var(--blanc-pur);
+      background: var(--blanc);
+      border-bottom: 2px solid var(--beige);
       padding: 4rem 1.5rem 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
     }
     .page-hero-inner {
       max-width: 1200px;
       margin: 0 auto;
-      position: relative;
-      z-index: 1;
     }
     .breadcrumb {
+      font-family: var(--font-corps);
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.55);
+      color: var(--gris);
       margin-bottom: 1.2rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color var(--transition); }
-    .breadcrumb a:hover { color: var(--olive); }
-    .breadcrumb span { color: rgba(255,255,255,0.3); }
-    .page-hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--olive);
-      background: rgba(153,153,51,0.15);
-      border: 1px solid rgba(153,153,51,0.4);
-      padding: 5px 14px;
-      border-radius: 100px;
-      margin-bottom: 1rem;
-    }
+    .breadcrumb a { color: var(--gris); transition: color var(--transition); }
+    .breadcrumb a:hover { color: var(--vert); }
+    .breadcrumb strong { color: var(--noir); }
+    .breadcrumb span { color: #c8c7bf; }
+
     .page-hero h1 {
       font-family: var(--font-titre);
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 800;
       text-transform: uppercase;
       line-height: 1.0;
+      color: var(--noir);
       margin-bottom: 1rem;
     }
-    .page-hero h1 .accent { color: var(--olive); }
+    .h1-thin {
+      font-weight: 100;
+      color: var(--vert);
+    }
     .page-hero-desc {
       font-size: 1rem;
-      color: rgba(255,255,255,0.78);
+      color: var(--gris);
       max-width: 560px;
       line-height: 1.7;
     }
 
-    /*  LAYOUT CONTACT  */
+    /* ─── LAYOUT CONTACT ───────────────────────────────── */
     .contact-section { padding: 4rem 1.5rem 5rem; }
     .contact-inner {
       max-width: 1200px;
@@ -91,82 +73,121 @@
       align-items: start;
     }
 
-    /*  INFOS CONTACT  */
+    /* ─── SIDEBAR REGISTRE ─────────────────────────────── */
     .contact-infos { display: flex; flex-direction: column; gap: 1.5rem; }
 
-    .contact-card {
-      background: var(--blanc-pur);
-      border: 2px solid #e8e7e0;
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: border-color var(--transition), box-shadow var(--transition);
+    /* Bloc garantie */
+    .garantie-notice {
+      background: var(--vert);
+      padding: 1.5rem 1.5rem 1.6rem;
+      border-left: 4px solid var(--or);
     }
-    .contact-card:hover {
-      border-color: var(--vert);
-      box-shadow: 0 4px 16px rgba(0,102,51,0.08);
+    .garantie-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 1rem;
     }
-    .contact-card-icon {
-      font-size: 1.8rem;
-      margin-bottom: 0.6rem;
-    }
-    .contact-card-title {
-      font-family: var(--font-titre);
-      font-size: 1rem;
-      font-weight: 800;
+    .garantie-eyebrow {
+      font-family: var(--font-corps);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--vert);
-      letter-spacing: 0.04em;
-      margin-bottom: 0.4rem;
+      color: rgba(255,255,255,0.65);
     }
-    .contact-card-value {
-      font-size: 0.88rem;
-      color: var(--noir);
+    .garantie-delay {
+      font-family: var(--font-titre);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--or);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .garantie-txt {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.82);
       line-height: 1.6;
     }
-    .contact-card-value a {
-      color: var(--vert);
-      font-weight: 700;
-      transition: color var(--transition);
+
+    /* Registre d'infos */
+    .info-ledger {
+      border: 1.5px solid #e0dfd8;
+      background: var(--blanc-pur);
     }
-    .contact-card-value a:hover { color: var(--olive); }
-    .contact-card-sub {
-      font-size: 0.75rem;
+    .info-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      border-bottom: 1px solid #e0dfd8;
+      min-height: 52px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-key {
+      font-family: var(--font-corps);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
       color: var(--gris);
-      margin-top: 0.3rem;
-    }
-
-    /* Garantie réponse */
-    .garantie-box {
-      background: var(--vert);
-      border-radius: 10px;
-      padding: 1.5rem;
-      color: var(--blanc-pur);
-    }
-    .garantie-box .contact-card-title { color: var(--olive); }
-    .garantie-box .contact-card-value { color: rgba(255,255,255,0.85); }
-
-    /* Univers disponibles */
-    .univers-pills {
+      background: var(--blanc);
+      border-right: 1px solid #e0dfd8;
+      padding: 0.85rem 0.9rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
+      align-items: flex-start;
     }
-    .pill {
-      font-size: 0.75rem;
+    .info-val {
+      font-size: 0.85rem;
+      color: var(--noir);
+      line-height: 1.5;
+      padding: 0.85rem 1rem;
+    }
+    .info-val a { color: var(--vert); font-weight: 700; transition: color var(--transition); }
+    .info-val a:hover { color: var(--or); }
+    .info-val small { display: block; font-size: 0.72rem; color: var(--gris); margin-top: 0.25rem; }
+
+    /* Univers */
+    .univers-ledger {
+      border: 1.5px solid #e0dfd8;
+      background: var(--blanc-pur);
+    }
+    .univers-ledger-title {
+      font-family: var(--font-corps);
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 100px;
-      background: rgba(255,255,255,0.12);
-      color: var(--blanc-pur);
-      border: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gris);
+      background: var(--blanc);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #e0dfd8;
+    }
+    .univers-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #e0dfd8;
+      font-family: var(--font-corps);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--noir);
+    }
+    .univers-item:last-child { border-bottom: none; }
+    .univers-num {
+      font-family: var(--font-titre);
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--or);
+      letter-spacing: 0.04em;
+      min-width: 22px;
     }
 
-    /*  FORMULAIRE  */
+    /* ─── FORMULAIRE ───────────────────────────────────── */
     .form-card {
       background: var(--blanc-pur);
       border: 2px solid #e8e7e0;
-      border-radius: 12px;
+      border-radius: 4px;
       padding: 2.5rem;
     }
     .form-title {
@@ -182,7 +203,6 @@
       color: var(--gris);
       margin-bottom: 2rem;
     }
-
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -192,6 +212,7 @@
     .form-group.full { grid-column: span 2; }
 
     label {
+      font-family: var(--font-corps);
       font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -224,7 +245,7 @@
     input::placeholder, textarea::placeholder { color: #b0afaa; }
 
     select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236F7D74' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234E5C54' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 14px center;
       padding-right: 36px;
@@ -244,13 +265,14 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      font-family: var(--font-corps);
       font-size: 0.82rem;
       font-weight: 700;
       color: var(--noir);
       cursor: pointer;
       background: var(--blanc);
       border: 1.5px solid #d8d7d0;
-      border-radius: 100px;
+      border-radius: 2px;
       padding: 6px 14px;
       transition: all var(--transition);
       text-transform: none;
@@ -302,14 +324,14 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--blanc-pur);
-      background: var(--vert);
+      background: var(--bronze);
       border: none;
       border-radius: 4px;
       cursor: pointer;
       transition: background var(--transition), transform var(--transition);
       margin-top: 0.5rem;
     }
-    .btn-submit:hover { background: var(--vert-dark); transform: translateY(-1px); }
+    .btn-submit:hover { background: var(--bronze-dk); transform: translateY(-1px); }
     .btn-submit:active { transform: translateY(0); }
 
     /* Message succès */
@@ -317,14 +339,13 @@
       display: none;
       background: rgba(0,102,51,0.08);
       border: 2px solid var(--vert);
-      border-radius: 10px;
+      border-radius: 4px;
       padding: 1.5rem;
       text-align: center;
       margin-top: 1rem;
     }
     .form-success.visible { display: block; }
-    .form-success .success-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .form-success p { font-size: 0.9rem; color: var(--vert); font-weight: 700; }
+    .form-success p { font-size: 0.9rem; color: var(--vert); font-weight: 700; margin-bottom: 0.3rem; }
     .form-success small { font-size: 0.78rem; color: var(--gris); }
 
     /* Message erreur champ */
@@ -340,13 +361,14 @@
     }
     .form-group.error .error-msg { display: block; }
 
-    /*  RESPONSIVE  */
+    /* ─── RESPONSIVE ───────────────────────────────────── */
     @media (max-width: 960px) {
       .contact-inner { grid-template-columns: 1fr; }
-      .contact-infos { display: grid; grid-template-columns: 1fr 1fr; }
+      .contact-infos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .garantie-notice { grid-column: span 2; }
     }
     @media (max-width: 640px) {
-      .contact-infos { grid-template-columns: 1fr; }
+      .contact-infos { display: flex; flex-direction: column; }
       .form-grid { grid-template-columns: 1fr; }
       .form-group.full { grid-column: span 1; }
       .form-card { padding: 1.5rem; }
@@ -354,8 +376,6 @@
   </style>
 </head>
 <body>
-
-  
 
   <!-- HEADER -->
   <header class="header">
@@ -391,15 +411,15 @@
     <!-- HERO -->
     <section class="page-hero">
       <div class="page-hero-inner">
-        <div class="breadcrumb">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
           <a href="index.html">Accueil</a>
-          <span>›</span>
-          <strong>Contact & Devis</strong>
-        </div>
-        <div class="page-hero-label"> Devis gratuit — Réponse sous 24h</div>
-        <h1>Contact <span class="accent">&amp; Devis</span></h1>
+          <span aria-hidden="true">›</span>
+          <strong>Contact &amp; Devis</strong>
+        </nav>
+        <div class="eyebrow">Devis gratuit — Réponse sous 24h</div>
+        <h1>Contact<span class="h1-thin"> &amp; Devis</span></h1>
         <p class="page-hero-desc">
-          Besoin d'un devis personnalisé ? Remplissez le formulaire ci-dessous 
+          Besoin d'un devis personnalisé ? Remplissez le formulaire ci-dessous
           et notre équipe vous répond sous 24h. Sans engagement, sans frais.
         </p>
       </div>
@@ -409,48 +429,63 @@
     <section class="contact-section">
       <div class="contact-inner">
 
-        <!-- INFOS CONTACT -->
+        <!-- SIDEBAR REGISTRE -->
         <aside class="contact-infos" aria-label="Informations de contact">
 
-          <div class="garantie-box">
-            <div class="contact-card-icon"></div>
-            <div class="contact-card-title">Réponse garantie sous 24h</div>
-            <div class="contact-card-value">Notre équipe traite chaque demande avec soin et vous répond rapidement, du lundi au vendredi.</div>
-            <div class="univers-pills">
-              <span class="pill"> High Tech</span>
-              <span class="pill"> Cosmétiques</span>
-              <span class="pill"> Médical</span>
-              <span class="pill">️ Déstockage</span>
+          <!-- Bloc garantie -->
+          <div class="garantie-notice">
+            <div class="garantie-top">
+              <span class="garantie-eyebrow">Engagement DC SKAT</span>
+              <span class="garantie-delay">24H</span>
+            </div>
+            <p class="garantie-txt">Notre équipe traite chaque demande avec soin, du lundi au vendredi. Réponse garantie sans engagement.</p>
+          </div>
+
+          <!-- Registre d'infos -->
+          <div class="info-ledger" role="list">
+            <div class="info-row" role="listitem">
+              <span class="info-key">Email</span>
+              <span class="info-val"><a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a></span>
+            </div>
+            <div class="info-row" role="listitem">
+              <span class="info-key">Zone</span>
+              <span class="info-val">
+                Île-de-France, France
+                <small>Livraison France entière — B2B &amp; B2C</small>
+              </span>
+            </div>
+            <div class="info-row" role="listitem">
+              <span class="info-key">NAF</span>
+              <span class="info-val">4690Z — Distribution et Commerce Multisectoriel</span>
+            </div>
+            <div class="info-row" role="listitem">
+              <span class="info-key">Légal</span>
+              <span class="info-val">
+                <a href="cgv.html">CGV</a> —
+                <a href="mentions-legales.html">Mentions légales</a> —
+                <a href="rgpd.html">RGPD</a>
+              </span>
             </div>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-card-icon"></div>
-            <div class="contact-card-title">Email</div>
-            <div class="contact-card-value">
-              <a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a>
+          <!-- Univers couverts -->
+          <div class="univers-ledger">
+            <div class="univers-ledger-title">Univers couverts</div>
+            <div class="univers-item">
+              <span class="univers-num">01</span>
+              <span>High Tech</span>
             </div>
-            <div class="contact-card-sub">Pour toute demande de devis ou information</div>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-card-icon"></div>
-            <div class="contact-card-title">Localisation</div>
-            <div class="contact-card-value">Île-de-France, France</div>
-            <div class="contact-card-sub">Livraison France entière — B2B & B2C</div>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-card-icon"></div>
-            <div class="contact-card-title">Informations légales</div>
-            <div class="contact-card-value">
-              DC SKAT — NAF 4690Z<br>
-              Distribution et Commerce Multisectoriel
+            <div class="univers-item">
+              <span class="univers-num">02</span>
+              <span>Cosmétiques</span>
             </div>
-            <div class="contact-card-sub">
-              <a href="cgv.html">CGV</a> —
-              <a href="mentions-legales.html">Mentions légales</a> —
-              <a href="rgpd.html">RGPD</a>
+            <div class="univers-item">
+              <span class="univers-num">03</span>
+              <span>Médical &amp; Paramédical</span>
+            </div>
+            <div class="univers-item">
+              <span class="univers-num">04</span>
+              <span>Déstockage &amp; Lots</span>
             </div>
           </div>
 
@@ -516,19 +551,19 @@
                 <div class="checkbox-group" id="univers-group">
                   <label class="checkbox-label">
                     <input type="checkbox" name="univers" value="hightech" />
-                     High Tech
+                    High Tech
                   </label>
                   <label class="checkbox-label">
                     <input type="checkbox" name="univers" value="cosmetiques" />
-                     Cosmétiques
+                    Cosmétiques
                   </label>
                   <label class="checkbox-label">
                     <input type="checkbox" name="univers" value="medical" />
-                     Médical & Paramédical
+                    Médical &amp; Paramédical
                   </label>
                   <label class="checkbox-label">
                     <input type="checkbox" name="univers" value="destockage" />
-                    ️ Déstockage & Lots
+                    Déstockage &amp; Lots
                   </label>
                 </div>
                 <span class="error-msg" id="univers-error">Veuillez sélectionner au moins un univers.</span>
@@ -573,7 +608,7 @@
                 <div class="rgpd-group">
                   <input type="checkbox" id="rgpd" name="rgpd" required />
                   <label for="rgpd">
-                    J'accepte que mes données soient utilisées pour traiter ma demande de devis, conformément à la 
+                    J'accepte que mes données soient utilisées pour traiter ma demande de devis, conformément à la
                     <a href="rgpd.html">politique de confidentialité</a> de DC SKAT. Aucune donnée ne sera transmise à des tiers. <span class="required">*</span>
                   </label>
                 </div>
@@ -583,12 +618,11 @@
             </div>
 
             <button type="submit" class="btn-submit">
-               Envoyer ma demande de devis
+              Envoyer ma demande de devis
             </button>
 
             <!-- Message de succès -->
             <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
-              <div class="success-icon"></div>
               <p>Votre demande a bien été envoyée !</p>
               <small>Notre équipe vous répondra sous 24h à l'adresse email indiquée.</small>
             </div>
@@ -609,9 +643,9 @@
           <img src="logo.png" alt="DC SKAT" style="width:200px;height:auto;margin-bottom:0.8rem;display:block;" />
           <p class="footer-desc">Grossiste multisectoriel basé en Île-de-France. Spécialiste du High Tech, Cosmétiques, Médical & Paramédical et Déstockage. B2B & B2C.</p>
           <div class="footer-contact">
-            <div> <a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a></div>
-            <div> Île-de-France, France</div>
-            <div> NAF 4690Z</div>
+            <div><a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a></div>
+            <div>Île-de-France, France</div>
+            <div>NAF 4690Z</div>
           </div>
         </div>
         <div class="footer-col">

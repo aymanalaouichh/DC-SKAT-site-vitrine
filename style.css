@@ -116,6 +116,10 @@ img { display: block; max-width: 100%; }
   top: 0;
   z-index: 100;
   border-bottom: 2px solid var(--vert-dark);
+  transition: box-shadow 0.3s ease-out;
+}
+.header.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.22);
 }
 .header-inner {
   max-width: 1200px;
@@ -143,7 +147,7 @@ img { display: block; max-width: 100%; }
 .nav { display: flex; align-items: center; gap: 0; }
 .nav a {
   font-family: var(--font-corps);
-  font-size: 0.80rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: rgba(255,255,255,0.80);
   padding: 4px 0;
@@ -163,10 +167,10 @@ img { display: block; max-width: 100%; }
 .nav a.nav-cta.active {
   background: var(--bronze);
   color: var(--blanc-pur);
-  padding: 9px 18px;
+  padding: 10px 24px;
   margin-left: 1rem;
   border-bottom: none;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.10em;
 }
 .nav a.nav-cta:hover, .nav a.nav-cta.active {
   background: var(--bronze-dk);
