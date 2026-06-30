@@ -3,20 +3,86 @@
    Importé par toutes les pages du site
    ════════════════════════════════════════════════════ */
 
+/* ─── POLICE ARMATURE (self-hosted) ─────────────────── */
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Armature';
+  src: url('assets/fonts/Armature-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ─── VARIABLES CHARTE DC SKAT ─────────────────────── */
 :root {
   /* Couleurs exactes issues du logo DC SKAT officiel */
-  --vert:      #00512c;  /* Vert officiel logo SKAT */
-  --vert-dark: #003d21;  /* Vert foncé */
-  --or:        #af8932;  /* Or officiel logo DC */
-  --olive:     #af8932;  /* Alias or pour compatibilité */
+  --vert:      #006633;  /* Vert officiel logo SKAT */
+  --vert-dark: #004d26;  /* Vert foncé */
+  --or:        #999933;  /* Or officiel logo DC */
+  --olive:     #999933;  /* Alias or pour compatibilité */
+  --beige:     #D9D2B6;
   --blanc:     #F5F4EE;
   --gris:      #6F7D74;
-  --bronze:    #8a6a22;  /* Or foncé pour hover */
+  --bronze:    #B8832F;  /* Or foncé pour hover */
   --noir:      #1A1A1A;
   --blanc-pur: #ffffff;
 
-  --font-titre: 'Barlow Condensed', sans-serif;
+  --font-titre: 'Armature', sans-serif;
   --font-corps: 'Lato', sans-serif;
 
   --radius:     6px;
