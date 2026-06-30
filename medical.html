@@ -3,66 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DC SKAT Médical & Paramédical — Tensiomètres, oxymètres, masques FFP2, gants, thermomètres, trousses, mobilité. Grossiste B2B & B2C — Île-de-France." />
-  <title>Médical & Paramédical — DC SKAT</title>
+  <meta name="description" content="DC SKAT Médical & Paramédical — Tensiomètres, oxymètres, masques FFP2, gants, thermomètres, trousses médicales, mobilité. Grossiste B2B & B2C — Île-de-France." />
+  <title>Médical &amp; Paramédical — DC SKAT</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    .page-hero { background: linear-gradient(135deg, #3d4f47 0%, var(--gris) 100%); color: var(--blanc-pur); padding: 4rem 1.5rem 3rem; position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px); }
-    .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-    .breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color var(--transition); }
-    .breadcrumb a:hover { color: var(--blanc-pur); }
-    .breadcrumb span { color: rgba(255,255,255,0.3); }
-    .page-hero-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blanc-pur); background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 5px 14px; border-radius: 100px; margin-bottom: 1rem; }
-    .page-hero h1 { font-family: var(--font-titre); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; text-transform: uppercase; line-height: 1.0; margin-bottom: 1rem; }
-    .page-hero h1 .accent { color: rgba(255,255,255,0.45); }
-    .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 560px; line-height: 1.7; margin-bottom: 2rem; }
-    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn { display: inline-block; font-family: var(--font-corps); font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 28px; border-radius: var(--radius); transition: var(--transition); cursor: pointer; border: none; text-decoration: none; }
-    .btn-primary { background: var(--vert); color: var(--blanc-pur); }
-    .btn-primary:hover { background: var(--vert-dark); }
-    .btn-secondary { background: transparent; color: var(--blanc-pur); border: 2px solid rgba(255,255,255,0.5); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+  /* ─── MÉDICAL PAGE ─── */
 
-    .univers-section { padding: 4rem 1.5rem; }
-    .univers-inner { max-width: 1200px; margin: 0 auto; }
-    .section-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--or); margin-bottom: 0.6rem; }
-    .section-title { font-family: var(--font-titre); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; text-transform: uppercase; color: var(--vert); line-height: 1.05; margin-bottom: 1rem; }
-    .section-desc { font-size: 0.95rem; color: var(--gris); line-height: 1.7; max-width: 680px; margin-bottom: 2rem; }
+  /* Hero : fond blanc, texte vert — propre et clinique */
+  .page-hero {
+    background: var(--blanc);
+    border-bottom: 2px solid var(--beige);
+    color: var(--noir);
+    padding: 4rem 1.5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Filigrane croix médicale — Armature Thin */
+  .page-hero::before {
+    content: '+';
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-titre);
+    font-weight: 100;
+    font-size: clamp(12rem, 22vw, 22rem);
+    color: var(--gris);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 
-    .alerte { background: rgba(0,81,44,0.06); border-left: 4px solid var(--vert); padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 3rem; font-size: 0.82rem; color: var(--noir); line-height: 1.6; }
-    .alerte strong { color: var(--vert); }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.75rem; color: var(--gris);
+    margin-bottom: 1.8rem;
+  }
+  .breadcrumb a { color: var(--gris); transition: color var(--transition); }
+  .breadcrumb a:hover { color: var(--vert); }
+  .breadcrumb-sep { color: var(--beige); }
 
-    .categories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
-    .cat-card { background: var(--blanc-pur); border: 2px solid #e8e7e0; border-radius: 10px; padding: 1.8rem 1.2rem; text-align: center; transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition); }
-    .cat-card:hover { border-color: var(--gris); box-shadow: 0 8px 24px rgba(111,125,116,0.12); transform: translateY(-3px); }
-    .cat-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
-    .cat-name { font-family: var(--font-titre); font-size: 1rem; font-weight: 800; text-transform: uppercase; color: var(--vert); margin-bottom: 0.4rem; }
-    .cat-desc { font-size: 0.78rem; color: var(--gris); line-height: 1.5; }
-    .cat-prix { font-size: 0.78rem; font-weight: 700; color: var(--or); margin-top: 0.5rem; }
+  .page-h1 { display: flex; flex-direction: column; margin: 0.8rem 0 1.6rem; }
+  .page-h1-main {
+    font-family: var(--font-titre); font-weight: 800;
+    font-size: clamp(3rem, 7vw, 6rem);
+    text-transform: uppercase; line-height: 0.88;
+    color: var(--vert); letter-spacing: -0.01em;
+  }
+  .page-h1-sub {
+    font-family: var(--font-titre); font-weight: 100;
+    font-size: clamp(1.4rem, 3vw, 2.8rem);
+    color: var(--gris); line-height: 1.1;
+    padding-left: 0.18em;
+  }
+  .page-hero-desc {
+    font-size: 0.95rem; color: var(--gris);
+    line-height: 1.72; max-width: 500px; margin-bottom: 2rem;
+  }
+  .page-hero-meta {
+    margin-top: 2.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--beige);
+    font-size: 0.78rem; color: var(--gris);
+    letter-spacing: 0.04em;
+  }
+  .page-hero-meta strong { color: var(--vert); font-weight: 700; }
 
-    .cta-boutique { background: linear-gradient(135deg, #3d4f47 0%, var(--gris) 100%); border-radius: 14px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-    .cta-boutique-text .title { font-family: var(--font-titre); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; text-transform: uppercase; color: var(--blanc-pur); line-height: 1.1; }
-    .cta-boutique-text .title span { color: rgba(255,255,255,0.45); }
-    .cta-boutique-text p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-top: 0.5rem; }
+  /* ─── SECTION CATALOGUE ─── */
+  .section-cat {
+    background: var(--blanc-pur);
+    padding: 5rem 1.5rem;
+  }
+  .section-cat-inner { max-width: 1200px; margin: 0 auto; }
+  .cat-header { margin-bottom: 3rem; }
 
-    @media (max-width: 768px) { .categories-grid { grid-template-columns: 1fr; } .cta-boutique { flex-direction: column; text-align: center; } .cta-boutique .btn-group { justify-content: center; } }
+  .cat-ledger-2col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.5rem;
+    border-top: 1px solid var(--beige);
+  }
+  .cat-row {
+    display: flex; align-items: flex-start; gap: 1.2rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--beige);
+  }
+  .cat-num {
+    font-family: var(--font-titre); font-weight: 800;
+    font-size: 0.95rem; color: var(--or);
+    flex-shrink: 0; width: 2rem; line-height: 1.6;
+  }
+  .cat-body { flex: 1; }
+  .cat-name {
+    font-family: var(--font-titre); font-weight: 700;
+    font-size: clamp(0.92rem, 1.4vw, 1.1rem);
+    text-transform: uppercase; color: var(--vert);
+    letter-spacing: 0.03em; line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+  .cat-desc { font-size: 0.80rem; color: var(--gris); line-height: 1.55; }
+  .cat-prix {
+    font-family: var(--font-corps); font-size: 0.75rem;
+    font-weight: 700; color: var(--bronze);
+    flex-shrink: 0; padding-top: 0.15rem;
+    text-align: right; white-space: nowrap;
+  }
+
+  .notice {
+    border-left: 3px solid var(--vert);
+    padding: 0.9rem 1.2rem;
+    background: rgba(0,102,51,0.04);
+    font-size: 0.82rem; color: var(--gris);
+    line-height: 1.6; margin-top: 3rem;
+  }
+  .notice strong { color: var(--vert); }
+
+  /* ─── CTA BOUTIQUE ─── */
+  .section-cta-boutique {
+    background: var(--beige);
+    padding: 4rem 1.5rem;
+  }
+  .cta-b-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+  }
+  .cta-b-text .eyebrow { margin-bottom: 0.6rem; }
+  .cta-b-title {
+    font-family: var(--font-titre); font-weight: 800;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    text-transform: uppercase; color: var(--vert);
+    line-height: 1.0;
+  }
+  .cta-b-title span {
+    font-family: var(--font-titre); font-weight: 100;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    display: block; color: var(--gris);
+    text-transform: none;
+  }
+  .cta-b-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .cat-ledger-2col { grid-template-columns: 1fr; }
+    .cta-b-inner { flex-direction: column; }
+    .cta-b-actions { width: 100%; }
+    .page-hero::before { font-size: 8rem; opacity: 0.05; }
+  }
+  @media (max-width: 480px) {
+    .page-hero { padding: 3rem 1.2rem 4rem; }
+    .section-cat { padding: 3rem 1.2rem; }
+    .section-cta-boutique { padding: 3rem 1.2rem; }
+    .cat-prix { display: none; }
+  }
   </style>
 </head>
 <body>
-
-  
 
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="DC SKAT — Accueil">
         <img src="logo.png" alt="DC SKAT — Distribution et Commerce Multisectoriel" />
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="high-tech.html">High Tech</a>
         <a href="cosmetiques.html">Cosmétiques</a>
@@ -70,11 +178,11 @@
         <a href="destockage.html">Déstockage</a>
         <a href="contact.html" class="nav-cta">Demander un devis</a>
       </nav>
-      <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <nav class="nav-mobile" id="navMobile">
+    <nav class="nav-mobile" id="navMobile" aria-label="Navigation mobile">
       <a href="index.html">Accueil</a>
       <a href="high-tech.html">High Tech</a>
       <a href="cosmetiques.html">Cosmétiques</a>
@@ -85,110 +193,178 @@
   </header>
 
   <main>
-    <section class="page-hero">
+
+    <!-- HERO -->
+    <section class="page-hero" aria-label="Médical &amp; Paramédical — DC SKAT">
       <div class="page-hero-inner">
-        <div class="breadcrumb"><a href="index.html">Accueil</a><span>›</span><strong>Médical & Paramédical</strong></div>
-        <div class="page-hero-label"> Univers Médical & Paramédical</div>
-        <h1>Médical &amp; <span class="accent">Paramédical</span></h1>
-        <p class="page-hero-desc">Tensiomètres, oxymètres, masques FFP2, gants, thermomètres, trousses et matériel de mobilité. En stock — B2B & B2C.</p>
+
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <strong>Médical &amp; Paramédical</strong>
+        </nav>
+
+        <div class="eyebrow">En stock permanent — Île-de-France</div>
+
+        <h1 class="page-h1">
+          <span class="page-h1-main">MÉDICAL</span>
+          <span class="page-h1-sub">&amp; Paramédical</span>
+        </h1>
+
+        <p class="page-hero-desc">Tensiomètres, oxymètres, masques FFP2, gants, thermomètres, trousses et matériel de mobilité. En stock permanent — conforme CE — B2B &amp; B2C.</p>
+
         <div class="btn-group">
-          <a href="https://medical.dcskat.fr" class="btn btn-primary" target="_blank">Accéder à la boutique</a>
+          <a href="https://medical.dcskat.fr" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Accéder à la boutique</a>
           <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
         </div>
+
+        <p class="page-hero-meta">Dès <strong>0,10&nbsp;€/unité</strong> · Certificats CE disponibles · Devis sous 24h</p>
+
       </div>
     </section>
 
-    <section class="univers-section">
-      <div class="univers-inner">
-        <div class="alerte">️ <strong>Avertissement réglementaire :</strong> Les produits médicaux et paramédicaux distribués par DC SKAT sont conformes aux réglementations européennes en vigueur. Certificats CE et fiches de sécurité disponibles sur demande.</div>
+    <!-- CATALOGUE -->
+    <section class="section-cat" aria-label="Notre gamme Médical &amp; Paramédical">
+      <div class="section-cat-inner">
 
-        <div class="section-eyebrow">Ce que nous proposons</div>
-        <h2 class="section-title">Notre gamme Médical & Paramédical</h2>
-        <p class="section-desc">DC SKAT distribue du matériel médical et paramédical en stock permanent en Île-de-France, pour les professionnels et les particuliers.</p>
-
-        <div class="categories-grid">
-          <div class="cat-card">
-            <div class="cat-icon"></div>
-            <div class="cat-name">Tensiomètres & oxymètres</div>
-            <div class="cat-desc">En stock — Devis sur demande.</div>
-            <div class="cat-prix">Dès 0,10 €/u</div>
+        <div class="cat-header">
+          <div class="eyebrow">Ce que nous proposons</div>
+          <div class="h2-split">
+            <span class="h2-thin">Notre gamme</span>
+            <span class="h2-bold">MÉDICAL &amp; PARAMÉD.</span>
           </div>
-          <div class="cat-card">
-            <div class="cat-icon"></div>
-            <div class="cat-name">Masques FFP2</div>
-            <div class="cat-desc">En stock — Devis sur lots disponible.</div>
-            <div class="cat-prix">Dès 0,10 €/u</div>
-          </div>
-          <div class="cat-card">
-            <div class="cat-icon"></div>
-            <div class="cat-name">Gants médicaux</div>
-            <div class="cat-desc">En stock — Devis sur demande.</div>
-            <div class="cat-prix">Dès 0,10 €/u</div>
-          </div>
-          <div class="cat-card">
-            <div class="cat-icon">️</div>
-            <div class="cat-name">Thermomètres</div>
-            <div class="cat-desc">En stock — Devis sur demande.</div>
-          </div>
-          <div class="cat-card">
-            <div class="cat-icon"></div>
-            <div class="cat-name">Trousses médicales</div>
-            <div class="cat-desc">En stock — Devis sur demande.</div>
-          </div>
-          <div class="cat-card">
-            <div class="cat-icon"></div>
-            <div class="cat-name">Matériel de mobilité</div>
-            <div class="cat-desc">En stock — Devis sur demande.</div>
-          </div>
+          <p style="font-size:0.95rem;color:var(--gris);line-height:1.7;max-width:620px;">DC SKAT distribue du matériel médical et paramédical en stock permanent en Île-de-France. Produits conformes aux réglementations européennes — pour professionnels et particuliers.</p>
         </div>
 
-        <div class="cta-boutique">
-          <div class="cta-boutique-text">
-            <div class="title">Boutique <span>Médical</span><br>en ligne</div>
-            <p>Commandez directement sur notre boutique ou contactez-nous pour un devis professionnel.</p>
+        <div class="cat-ledger-2col" role="list" aria-label="Catégories Médical &amp; Paramédical">
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">01</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Tensiomètres &amp; oxymètres</h3>
+              <p class="cat-desc">Appareils de mesure pression artérielle et saturation en oxygène. Bras, poignet, doigt. En stock.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix à partir de 0,10 € l'unité">Dès 0,10&nbsp;€/u</div>
           </div>
-          <div class="btn-group">
-            <a href="https://medical.dcskat.fr" class="btn btn-primary" target="_blank">Visiter la boutique</a>
-            <a href="contact.html" class="btn btn-secondary">Devis professionnel</a>
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">02</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Masques FFP2 &amp; chirurgicaux</h3>
+              <p class="cat-desc">Masques filtrants FFP2 EN149:2001, masques chirurgicaux Typ IIR. Boîtes et palettes. Certifiés CE.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix à partir de 0,10 € l'unité">Dès 0,10&nbsp;€/u</div>
           </div>
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">03</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Gants médicaux</h3>
+              <p class="cat-desc">Gants en nitrile et latex, non stériles et stériles. Tailles XS–XL. Boîtes de 100. En stock.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix à partir de 0,10 € l'unité">Dès 0,10&nbsp;€/u</div>
+          </div>
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">04</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Thermomètres</h3>
+              <p class="cat-desc">Thermomètres frontal infrarouge, auriculaire et buccal. Sans contact. En stock en lots.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix sur devis">Devis/demande</div>
+          </div>
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">05</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Trousses médicales &amp; de secours</h3>
+              <p class="cat-desc">Trousses de premiers secours conforme EN 13157, trousses de voyage, trousses professionnelles. En stock.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix sur devis">Devis/demande</div>
+          </div>
+
+          <div class="cat-row" role="listitem">
+            <span class="cat-num" aria-hidden="true">06</span>
+            <div class="cat-body">
+              <h3 class="cat-name">Matériel de mobilité</h3>
+              <p class="cat-desc">Cannes, béquilles, déambulateurs, fauteuils roulants légers. En stock — devis sur lots disponible.</p>
+            </div>
+            <div class="cat-prix" aria-label="Prix sur devis">Devis/demande</div>
+          </div>
+
+        </div>
+
+        <div class="notice" role="note">
+          <strong>Avertissement réglementaire :</strong> Les dispositifs médicaux distribués par DC SKAT sont conformes aux réglementations européennes en vigueur (MDR 2017/745, EN 149:2001). Certificats CE et fiches techniques disponibles sur demande.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA BOUTIQUE -->
+    <section class="section-cta-boutique" aria-label="Accéder à la boutique Médical">
+      <div class="cta-b-inner">
+        <div class="cta-b-text">
+          <div class="eyebrow">Boutique en ligne</div>
+          <div class="cta-b-title">
+            BOUTIQUE MÉDICAL
+            <span>Commandez directement en ligne ou contactez-nous pour un devis professionnel.</span>
+          </div>
+        </div>
+        <div class="cta-b-actions">
+          <a href="https://medical.dcskat.fr" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visiter la boutique</a>
+          <a href="contact.html" class="btn btn-secondary">Devis professionnel</a>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="logo.png" alt="DC SKAT" style="width:200px;height:auto;margin-bottom:0.8rem;display:block;" />
-          <p class="footer-desc">Grossiste multisectoriel basé en Île-de-France. B2B & B2C.</p>
+          <a href="index.html" class="logo-footer" aria-label="DC SKAT — Accueil">
+            <img src="logo.png" alt="DC SKAT" />
+          </a>
+          <p class="footer-desc">Grossiste multisectoriel basé en Île-de-France. Spécialiste du High Tech, Cosmétiques, Médical &amp; Paramédical et Déstockage. B2B &amp; B2C.</p>
           <div class="footer-contact">
-            <div> <a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a></div>
-            <div> Île-de-France, France</div>
+            <div><a href="mailto:contact@dcskat.fr">contact@dcskat.fr</a></div>
+            <div>Île-de-France, France</div>
           </div>
         </div>
-        <div class="footer-col"><h4>Nos univers</h4><ul>
-          <li><a href="high-tech.html">High Tech</a></li>
-          <li><a href="cosmetiques.html">Cosmétiques</a></li>
-          <li><a href="medical.html">Médical & Paramédical</a></li>
-          <li><a href="destockage.html">Déstockage & Lots</a></li>
-        </ul></div>
-        <div class="footer-col"><h4>Boutiques</h4><ul>
-          <li><a href="https://hightech.dcskat.fr" target="_blank">High Tech Shop</a></li>
-          <li><a href="https://cosmetiques.dcskat.fr" target="_blank">Cosmétiques Shop</a></li>
-          <li><a href="https://medical.dcskat.fr" target="_blank">Médical Shop</a></li>
-          <li><a href="https://destockage.dcskat.fr" target="_blank">Déstockage Shop</a></li>
-        </ul></div>
-        <div class="footer-col"><h4>Informations</h4><ul>
-          <li><a href="contact.html">Contact & Devis</a></li>
-          <li><a href="cgv.html">CGV</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="rgpd.html">RGPD</a></li>
-        </ul></div>
+        <div class="footer-col">
+          <h4>Nos univers</h4>
+          <ul>
+            <li><a href="high-tech.html">High Tech</a></li>
+            <li><a href="cosmetiques.html">Cosmétiques</a></li>
+            <li><a href="medical.html">Médical &amp; Paramédical</a></li>
+            <li><a href="destockage.html">Déstockage &amp; Lots</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Boutiques en ligne</h4>
+          <ul>
+            <li><a href="https://hightech.dcskat.fr" target="_blank" rel="noopener">High Tech Shop</a></li>
+            <li><a href="https://cosmetiques.dcskat.fr" target="_blank" rel="noopener">Cosmétiques Shop</a></li>
+            <li><a href="https://medical.dcskat.fr" target="_blank" rel="noopener">Médical Shop</a></li>
+            <li><a href="https://destockage.dcskat.fr" target="_blank" rel="noopener">Déstockage Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="contact.html">Contact &amp; Devis</a></li>
+            <li><a href="cgv.html">CGV</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="rgpd.html">RGPD</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 DC SKAT — Tous droits réservés.</p>
-        <nav class="footer-legal">
+        <p>© 2026 DC SKAT — Distribution et Commerce Multisectoriel. Tous droits réservés.</p>
+        <nav class="footer-legal" aria-label="Liens légaux">
           <a href="cgv.html">CGV</a>
           <a href="mentions-legales.html">Mentions légales</a>
           <a href="rgpd.html">RGPD</a>
@@ -196,6 +372,8 @@
       </div>
     </div>
   </footer>
+
   <script src="main.js"></script>
+
 </body>
 </html>
