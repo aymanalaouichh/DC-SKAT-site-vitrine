@@ -431,7 +431,7 @@
   }
   .arg-header svg {
     flex-shrink: 0;
-    stroke: var(--or);
+    stroke: var(--vert);
     opacity: 0.9;
   }
   .arg-title {
@@ -487,13 +487,14 @@
     gap: 0.75rem;
     text-align: center;
   }
-  .mp-item svg {
-    height: 42px;
+  .mp-item img {
+    height: 56px;
     width: auto;
-    opacity: 0.88;
+    max-width: 140px;
     transition: opacity 0.22s ease-out;
+    object-fit: contain;
   }
-  .mp-item:hover svg { opacity: 1; }
+  .mp-item:hover img { opacity: 1; }
   .mp-name {
     font-family: var(--font-titre);
     font-weight: 600;
@@ -912,55 +913,24 @@
 
         <div class="mp-names" aria-label="Marketplaces partenaires">
 
-          <!-- AMAZON -->
           <div class="mp-item">
-            <svg height="42" viewBox="0 0 130 42" xmlns="http://www.w3.org/2000/svg" aria-label="Amazon">
-              <text x="65" y="24" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle" letter-spacing="0.5">amazon</text>
-              <path d="M26 34 Q65 46 104 34" stroke="#FF9900" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <path d="M100 30 L104 34 L101 38" stroke="#FF9900" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="mp-name">Amazon</span>
+            <img src="assets/fonts/logos/197-1974819_amazon-logo-white-transparent.png" alt="Amazon" />
           </div>
 
-          <!-- CDISCOUNT -->
           <div class="mp-item">
-            <svg height="42" viewBox="0 0 130 42" xmlns="http://www.w3.org/2000/svg" aria-label="Cdiscount">
-              <text x="8" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#FF6600">C</text>
-              <text x="28" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white">discount</text>
-            </svg>
-            <span class="mp-name">Cdiscount</span>
+            <img src="assets/fonts/logos/ca27f39c-bc5f-4cf0-b8d3-9479c45ea8d4.png-removebg-preview.png" alt="Cdiscount" />
           </div>
 
-          <!-- EBAY -->
           <div class="mp-item">
-            <svg height="42" viewBox="0 0 106 42" xmlns="http://www.w3.org/2000/svg" aria-label="eBay">
-              <text x="0"  y="36" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="#E53238">e</text>
-              <text x="26" y="36" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="white">B</text>
-              <text x="52" y="36" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="#F5AF02">a</text>
-              <text x="76" y="36" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="#9DC63A">y</text>
-            </svg>
-            <span class="mp-name">eBay</span>
+            <img src="assets/fonts/logos/EBAY.D-24365187.png" alt="eBay" />
           </div>
 
-          <!-- RAKUTEN -->
           <div class="mp-item">
-            <svg height="42" viewBox="0 0 130 42" xmlns="http://www.w3.org/2000/svg" aria-label="Rakuten">
-              <rect x="3" y="4" width="34" height="34" rx="3" fill="#BF0000"/>
-              <text x="20" y="28" font-family="Arial Black, Arial, sans-serif" font-size="20" font-weight="900" fill="white" text-anchor="middle">R</text>
-              <text x="45" y="28" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="white">Rakuten</text>
-            </svg>
-            <span class="mp-name">Rakuten</span>
+            <img src="assets/fonts/logos/4755.T_BIG.D-1ebf334e.png" alt="Rakuten" />
           </div>
 
-          <!-- FNAC / DARTY -->
           <div class="mp-item">
-            <svg height="42" viewBox="0 0 130 42" xmlns="http://www.w3.org/2000/svg" aria-label="Fnac Darty">
-              <rect x="2" y="5" width="54" height="32" rx="2" fill="#F5C800"/>
-              <text x="29" y="27" font-family="Arial Black, Arial, sans-serif" font-size="17" font-weight="900" fill="#1A1A1A" text-anchor="middle">fnac</text>
-              <text x="62" y="26" font-family="Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.45)">/</text>
-              <text x="72" y="26" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="white">Darty</text>
-            </svg>
-            <span class="mp-name">Fnac / Darty</span>
+            <img src="assets/fonts/logos/logo-fnac.png" alt="Fnac / Darty" />
           </div>
 
         </div>
