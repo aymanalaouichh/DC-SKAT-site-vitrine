@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#006633" />
+  <title>Page introuvable — DC SKAT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Chemins absolus : cette page peut être servie depuis n'importe quelle URL -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+  /* ─── PAGE 404 ─── */
+
+  .cs-main {
+    --cs-bar: var(--vert);
+    --cs-track: var(--beige);
+    background: var(--blanc-pur);
+    color: var(--noir);
+  }
+  /* Watermark typographique "404" */
+  .cs-main::before {
+    content: '404';
+    position: absolute;
+    left: -1rem;
+    bottom: -0.12em;
+    font-family: var(--font-titre);
+    font-weight: 800;
+    font-size: clamp(8rem, 22vw, 22rem);
+    color: var(--vert);
+    opacity: 0.05;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cs-h1-main { color: var(--vert); }
+  .cs-h1-sub  { color: var(--gris); }
+  .cs-lead    { color: var(--gris); }
+
+  .cs-card { background: var(--blanc); border: 2px solid var(--beige); }
+  .cs-card-label { color: var(--gris); }
+  .cs-card-title { color: var(--vert); }
+  .cs-list, .cs-list li { border-color: var(--beige); }
+  .cs-list li { padding: 0; }
+  .cs-list a {
+    display: flex; align-items: baseline; gap: 1rem;
+    width: 100%; padding: 0.85rem 0;
+  }
+  .cs-list-num  { color: var(--or); }
+  .cs-list-name { color: var(--vert); transition: color var(--transition); }
+  .cs-list-tag  { color: var(--bronze); transition: transform var(--transition); }
+  .cs-list a:hover .cs-list-name { color: var(--vert-dark); }
+  .cs-list a:hover .cs-list-tag  { transform: translateX(3px); }
+  </style>
+</head>
+<body>
+<div class="cs-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="DC SKAT — Accueil">
+        <img src="/logo.png" alt="DC SKAT — Distribution et Commerce Multisectoriel" />
+      </a>
+      <a href="/" class="cs-back">← Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <main class="cs-main" aria-labelledby="cs-title">
+    <div class="cs-inner">
+
+      <div class="cs-text">
+        <div class="eyebrow">Erreur 404</div>
+
+        <h1 class="cs-h1" id="cs-title">
+          <span class="cs-h1-main">PAGE</span>
+          <span class="cs-h1-sub">introuvable</span>
+        </h1>
+
+        <p class="cs-lead">La page que vous cherchez n'existe pas ou a été déplacée. Retrouvez nos univers produits ci-contre, ou contactez-nous directement pour un devis.</p>
+
+        <div class="btn-group">
+          <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+          <a href="/contact" class="btn btn-secondary">Demander un devis</a>
+        </div>
+      </div>
+
+      <aside class="cs-card" aria-label="Nos univers">
+        <div class="cs-card-label">Nos univers produits</div>
+        <h2 class="cs-card-title">Où aller ?</h2>
+        <ul class="cs-list">
+          <li><a href="/high-tech"><span class="cs-list-num" aria-hidden="true">01</span><span class="cs-list-name">High Tech</span><span class="cs-list-tag" aria-hidden="true">→</span></a></li>
+          <li><a href="/cosmetiques"><span class="cs-list-num" aria-hidden="true">02</span><span class="cs-list-name">Cosmétiques</span><span class="cs-list-tag" aria-hidden="true">→</span></a></li>
+          <li><a href="/medical"><span class="cs-list-num" aria-hidden="true">03</span><span class="cs-list-name">Médical &amp; Paramédical</span><span class="cs-list-tag" aria-hidden="true">→</span></a></li>
+          <li><a href="/destockage"><span class="cs-list-num" aria-hidden="true">04</span><span class="cs-list-name">Déstockage &amp; Lots</span><span class="cs-list-tag" aria-hidden="true">→</span></a></li>
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="cs-foot">
+    <div class="cs-foot-inner">
+      <p>© 2026 DC SKAT — Distribution et Commerce Multisectoriel.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="/cgv">CGV</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/rgpd">RGPD</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -35,10 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ─── LIEN ACTIF DANS LA NAV ──────────────────────────
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // URLs propres : "/high-tech", "/high-tech.html" et "/" (accueil) sont normalisées
+  const pageName = path => path.split('/').pop().replace(/\.html$/, '').replace(/^index$/, '');
+  const currentPage = pageName(window.location.pathname);
   document.querySelectorAll('.nav a, .nav-mobile a').forEach(link => {
-    const href = link.getAttribute('href').replace('/', '');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (pageName(link.getAttribute('href')) === currentPage) {
       link.classList.add('active');
     }
   });
