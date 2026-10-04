@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La boutique en ligne DC SKAT Médical & Paramédical est en cours de construction. En attendant, commandez sur devis — réponse sous 24h." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#006633" />
+  <title>Boutique Médical &amp; Paramédical en construction — DC SKAT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  /* ─── BOUTIQUE MÉDICAL — EN CONSTRUCTION ─── */
+
+  /* Fond blanc, propre et clinique (identique au hero Médical) */
+  .cs-main {
+    --cs-bar: var(--vert);
+    --cs-track: var(--beige);
+    background: var(--blanc);
+    color: var(--noir);
+  }
+  /* Filigrane croix médicale — Armature Thin */
+  .cs-main::before {
+    content: '+';
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-titre);
+    font-weight: 100;
+    font-size: clamp(14rem, 28vw, 28rem);
+    color: var(--gris);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cs-h1-main { color: var(--vert); }
+  .cs-h1-sub  { color: var(--gris); }
+  .cs-lead    { color: var(--gris); }
+  .cs-status-head { color: var(--gris); }
+
+  .cs-meta { border-color: var(--beige); color: var(--gris); }
+  .cs-meta strong { color: var(--vert); }
+  .cs-meta a {
+    color: var(--vert); border-color: rgba(0,102,51,0.25);
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .cs-meta a:hover { color: var(--vert-dark); border-color: var(--vert); }
+
+  /* Carte : blanc pur, bord beige (comme le panel Médical) */
+  .cs-card { background: var(--blanc-pur); border: 2px solid var(--beige); }
+  .cs-card-label { color: var(--gris); }
+  .cs-card-title { color: var(--vert); }
+  .cs-list, .cs-list li { border-color: var(--beige); }
+  .cs-list-num  { color: var(--or); }
+  .cs-list-name { color: var(--vert); }
+  .cs-list-tag  { color: var(--bronze); }
+  .cs-list-tag.is-devis { color: var(--gris); }
+  .cs-card-foot { color: var(--gris); }
+  .cs-card-foot strong { color: var(--vert); }
+
+  /* Desktop : la carte occupe la droite → filigrane ancré en bas à gauche */
+  @media (min-width: 901px) {
+    .cs-main::before { right: auto; left: -4rem; top: auto; bottom: -0.3em; transform: none; }
+  }
+  @media (max-width: 768px) {
+    .cs-main::before { font-size: 10rem; opacity: 0.05; }
+  }
+  </style>
+</head>
+<body>
+<div class="cs-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="DC SKAT — Accueil">
+        <img src="logo.png" alt="DC SKAT — Distribution et Commerce Multisectoriel" />
+      </a>
+      <a href="medical.html" class="cs-back">← Retour au site</a>
+    </div>
+  </header>
+
+  <main class="cs-main" aria-labelledby="cs-title">
+    <div class="cs-inner">
+
+      <div class="cs-text">
+        <div class="eyebrow">Boutique en ligne · medical.dcskat.fr</div>
+
+        <h1 class="cs-h1" id="cs-title">
+          <span class="cs-h1-main">MÉDICAL</span>
+          <span class="cs-h1-sub">Shop en construction</span>
+        </h1>
+
+        <p class="cs-lead">Notre boutique en ligne Médical &amp; Paramédical est en cours de construction. Tensiomètres, oxymètres, masques FFP2, gants et matériel de mobilité y seront bientôt commandables directement.</p>
+
+        <div class="cs-status">
+          <div class="cs-status-head">
+            <span class="cs-status-label"><span class="cs-status-dot" aria-hidden="true"></span>Mise en ligne en cours</span>
+            <span>Bientôt</span>
+          </div>
+          <div class="cs-track" aria-hidden="true"></div>
+        </div>
+
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+          <a href="medical.html" class="btn btn-secondary">Voir l'univers Médical</a>
+        </div>
+
+        <p class="cs-meta">En attendant l'ouverture, commandez <strong>sur devis</strong> — réponse sous 24h.<br />Être prévenu de l'ouverture : <a href="mailto:contact@dcskat.fr?subject=Ouverture%20boutique%20M%C3%A9dical">contact@dcskat.fr</a></p>
+      </div>
+
+      <aside class="cs-card" aria-label="Bientôt en boutique">
+        <div class="cs-card-label">Bientôt en rayon</div>
+        <h2 class="cs-card-title">Ce que vous y trouverez</h2>
+        <ul class="cs-list">
+          <li><span class="cs-list-num" aria-hidden="true">01</span><span class="cs-list-name">Tensiomètres &amp; oxymètres</span><span class="cs-list-tag">Dès 0,10&nbsp;€/u</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">02</span><span class="cs-list-name">Masques FFP2 &amp; chirurgicaux</span><span class="cs-list-tag">Dès 0,10&nbsp;€/u</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">03</span><span class="cs-list-name">Gants médicaux</span><span class="cs-list-tag">Dès 0,10&nbsp;€/u</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">04</span><span class="cs-list-name">Thermomètres</span><span class="cs-list-tag is-devis">Sur devis</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">05</span><span class="cs-list-name">Trousses médicales &amp; de secours</span><span class="cs-list-tag is-devis">Sur devis</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">06</span><span class="cs-list-name">Matériel de mobilité</span><span class="cs-list-tag is-devis">Sur devis</span></li>
+        </ul>
+        <p class="cs-card-foot">Produits <strong>conformes CE</strong> — certificats disponibles sur demande.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="cs-foot">
+    <div class="cs-foot-inner">
+      <p>© 2026 DC SKAT — Distribution et Commerce Multisectoriel.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="cgv.html">CGV</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="rgpd.html">RGPD</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

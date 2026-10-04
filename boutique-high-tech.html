@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La boutique en ligne DC SKAT High Tech est en cours de construction. En attendant, commandez sur devis — réponse sous 24h." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#004d26" />
+  <title>Boutique High Tech en construction — DC SKAT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  /* ─── BOUTIQUE HIGH TECH — EN CONSTRUCTION ─── */
+
+  /* Fond vert-dark + grille inventaire (identique au hero High Tech) */
+  .cs-main {
+    --cs-bar: var(--or);
+    --cs-track: rgba(255,255,255,0.12);
+    background: var(--vert-dark);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    color: var(--blanc-pur);
+  }
+
+  .cs-h1-main { color: var(--blanc-pur); }
+  .cs-h1-sub  { color: rgba(255,255,255,0.55); }
+  .cs-lead    { color: rgba(255,255,255,0.72); }
+  .cs-status-head { color: rgba(255,255,255,0.6); }
+
+  .cs-meta { border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.45); }
+  .cs-meta strong { color: var(--or); }
+  .cs-meta a {
+    color: var(--blanc-pur); border-color: rgba(255,255,255,0.3);
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .cs-meta a:hover { color: var(--or); border-color: var(--or); }
+
+  /* Carte : étiquette de lot sur vert (comme le panel High Tech au survol) */
+  .cs-card { background: var(--vert); }
+  .cs-card-label { color: var(--or); }
+  .cs-card-title { color: var(--blanc-pur); }
+  .cs-list, .cs-list li { border-color: rgba(255,255,255,0.14); }
+  .cs-list-num  { color: var(--or); }
+  .cs-list-name { color: var(--blanc-pur); }
+  .cs-list-tag  { color: var(--or); }
+  .cs-list-tag.is-devis { color: rgba(255,255,255,0.5); }
+  .cs-card-foot { color: rgba(255,255,255,0.55); }
+  </style>
+</head>
+<body>
+<div class="cs-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="DC SKAT — Accueil">
+        <img src="logo.png" alt="DC SKAT — Distribution et Commerce Multisectoriel" />
+      </a>
+      <a href="high-tech.html" class="cs-back">← Retour au site</a>
+    </div>
+  </header>
+
+  <main class="cs-main" aria-labelledby="cs-title">
+    <div class="cs-inner">
+
+      <div class="cs-text">
+        <div class="eyebrow eyebrow-light">Boutique en ligne · hightech.dcskat.fr</div>
+
+        <h1 class="cs-h1" id="cs-title">
+          <span class="cs-h1-main">HIGH TECH</span>
+          <span class="cs-h1-sub">Shop en construction</span>
+        </h1>
+
+        <p class="cs-lead">Notre boutique en ligne High Tech est en cours de construction. Smartphones reconditionnés, écouteurs, montres connectées et accessoires y seront bientôt commandables directement.</p>
+
+        <div class="cs-status">
+          <div class="cs-status-head">
+            <span class="cs-status-label"><span class="cs-status-dot" aria-hidden="true"></span>Mise en ligne en cours</span>
+            <span>Bientôt</span>
+          </div>
+          <div class="cs-track" aria-hidden="true"></div>
+        </div>
+
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-blanc">Demander un devis</a>
+          <a href="high-tech.html" class="btn btn-outline-blanc">Voir l'univers High Tech</a>
+        </div>
+
+        <p class="cs-meta">En attendant l'ouverture, commandez <strong>sur devis</strong> — réponse sous 24h.<br />Être prévenu de l'ouverture : <a href="mailto:contact@dcskat.fr?subject=Ouverture%20boutique%20High%20Tech">contact@dcskat.fr</a></p>
+      </div>
+
+      <aside class="cs-card cs-card--cut" aria-label="Bientôt en boutique">
+        <div class="cs-card-label">Bientôt en rayon</div>
+        <h2 class="cs-card-title">Ce que vous y trouverez</h2>
+        <ul class="cs-list">
+          <li><span class="cs-list-num" aria-hidden="true">01</span><span class="cs-list-name">Smartphones reconditionnés</span><span class="cs-list-tag">Dès 1,50&nbsp;€/u</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">02</span><span class="cs-list-name">Écouteurs Bluetooth</span><span class="cs-list-tag is-devis">Sur devis</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">03</span><span class="cs-list-name">Montres connectées</span><span class="cs-list-tag is-devis">Sur devis</span></li>
+          <li><span class="cs-list-num" aria-hidden="true">04</span><span class="cs-list-name">Câbles &amp; accessoires</span><span class="cs-list-tag">Dès 0,10&nbsp;€/u</span></li>
+        </ul>
+        <p class="cs-card-foot">Déjà en stock permanent en Île-de-France, à l'unité ou en lots — B2B &amp; B2C.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="cs-foot">
+    <div class="cs-foot-inner">
+      <p>© 2026 DC SKAT — Distribution et Commerce Multisectoriel.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="cgv.html">CGV</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="rgpd.html">RGPD</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

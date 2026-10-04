@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La boutique en ligne DC SKAT Déstockage & Lots est en cours de construction. En attendant, lots et palettes disponibles sur devis — réponse sous 24h." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#B8832F" />
+  <title>Boutique Déstockage en construction — DC SKAT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  /* ─── BOUTIQUE DÉSTOCKAGE — EN CONSTRUCTION ─── */
+
+  .cs-main {
+    --cs-bar: var(--bronze);
+    --cs-track: var(--beige);
+    background: var(--blanc-pur);
+    color: var(--noir);
+  }
+  /* Watermark typographique "−70%" (identique au hero Déstockage) */
+  .cs-main::before {
+    content: '−70%';
+    position: absolute;
+    right: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-titre);
+    font-weight: 800;
+    font-size: clamp(8rem, 20vw, 20rem);
+    color: var(--bronze);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Badge — rectangle plat bronze */
+  .badge-arrivage {
+    display: block;
+    width: fit-content;
+    background: var(--bronze);
+    color: var(--blanc-pur);
+    font-family: var(--font-corps);
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .cs-h1-main { color: var(--vert); font-size: clamp(2.4rem, 6vw, 5.2rem); }
+  .cs-h1-sub  { color: var(--gris); }
+  .cs-lead    { color: var(--gris); }
+  .cs-status-head { color: var(--gris); }
+
+  .cs-meta { border-color: var(--beige); color: var(--gris); }
+  .cs-meta strong { color: var(--bronze); }
+  .cs-meta a {
+    color: var(--bronze); border-color: rgba(184,131,47,0.3);
+    transition: border-color var(--transition);
+  }
+  .cs-meta a:hover { border-color: var(--bronze); }
+
+  /* Carte : étiquette de lot grande taille (comme le panel Déstockage) */
+  .cs-card { background: var(--blanc); border: 2px solid var(--beige); }
+  .cs-card--cut { clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 44px, 100% 100%, 0 100%); }
+  .cs-card-label { color: var(--bronze); }
+  .cs-card-title { color: var(--vert); }
+  .cs-list, .cs-list li { border-color: var(--beige); }
+  .cs-list li { align-items: center; }
+  .cs-list-num  { color: var(--or); }
+  .cs-list-name { color: var(--vert); }
+  .cs-list-tag  { text-align: right; line-height: 1.1; }
+  .cs-list-tag .pct {
+    display: block;
+    font-family: var(--font-titre); font-weight: 800;
+    font-size: 1.15rem; color: var(--bronze);
+  }
+  .cs-list-tag .lbl {
+    font-size: 0.62rem; font-weight: 400; color: var(--gris);
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .cs-card-foot { color: var(--gris); }
+
+  /* Desktop : la carte occupe la droite → filigrane ancré en bas à gauche */
+  @media (min-width: 901px) {
+    .cs-main::before { right: auto; left: -1rem; top: auto; bottom: -0.12em; transform: none; }
+  }
+  @media (max-width: 480px) {
+    .cs-main::before { font-size: 6rem; }
+  }
+  </style>
+</head>
+<body>
+<div class="cs-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="DC SKAT — Accueil">
+        <img src="logo.png" alt="DC SKAT — Distribution et Commerce Multisectoriel" />
+      </a>
+      <a href="destockage.html" class="cs-back">← Retour au site</a>
+    </div>
+  </header>
+
+  <main class="cs-main" aria-labelledby="cs-title">
+    <div class="cs-inner">
+
+      <div class="cs-text">
+        <div class="badge-arrivage">En construction</div>
+        <div class="eyebrow">Boutique en ligne · destockage.dcskat.fr</div>
+
+        <h1 class="cs-h1" id="cs-title">
+          <span class="cs-h1-main">DÉSTOCKAGE</span>
+          <span class="cs-h1-sub">Shop en construction</span>
+        </h1>
+
+        <p class="cs-lead">Notre boutique Déstockage &amp; Lots est en cours de construction. Palettes mixtes, fins de série et surstocks entrepôt y seront bientôt proposés en ligne, à prix grossiste.</p>
+
+        <div class="cs-status">
+          <div class="cs-status-head">
+            <span class="cs-status-label"><span class="cs-status-dot" aria-hidden="true"></span>Mise en ligne en cours</span>
+            <span>Bientôt</span>
+          </div>
+          <div class="cs-track" aria-hidden="true"></div>
+        </div>
+
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-devis">Demander un devis lots</a>
+          <a href="destockage.html" class="btn btn-secondary">Voir l'univers Déstockage</a>
+        </div>
+
+        <p class="cs-meta">Arrivages réguliers, remises de <strong>−40% à −70%</strong> — disponibles dès maintenant sur devis.<br />Être prévenu de l'ouverture : <a href="mailto:contact@dcskat.fr?subject=Ouverture%20boutique%20D%C3%A9stockage">contact@dcskat.fr</a></p>
+      </div>
+
+      <aside class="cs-card cs-card--cut" aria-label="Bientôt en boutique">
+        <div class="cs-card-label">Bientôt en ligne</div>
+        <h2 class="cs-card-title">Lots &amp; palettes</h2>
+        <ul class="cs-list">
+          <li><span class="cs-list-num" aria-hidden="true">01</span><span class="cs-list-name">Palettes High Tech</span><span class="cs-list-tag"><span class="pct">−70%</span><span class="lbl">jusqu'à</span></span></li>
+          <li><span class="cs-list-num" aria-hidden="true">02</span><span class="cs-list-name">Fins de série Cosmétiques</span><span class="cs-list-tag"><span class="pct">−70%</span><span class="lbl">jusqu'à</span></span></li>
+          <li><span class="cs-list-num" aria-hidden="true">03</span><span class="cs-list-name">Surstocks Médical &amp; Paramédical</span><span class="cs-list-tag"><span class="pct">−60%</span><span class="lbl">jusqu'à</span></span></li>
+          <li><span class="cs-list-num" aria-hidden="true">04</span><span class="cs-list-name">Palettes mixtes tous univers</span><span class="cs-list-tag"><span class="pct">−40%</span><span class="lbl">jusqu'à</span></span></li>
+        </ul>
+        <p class="cs-card-foot">Remises calculées sur le prix indicatif. Arrivages réguliers en entrepôt — Île-de-France.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="cs-foot">
+    <div class="cs-foot-inner">
+      <p>© 2026 DC SKAT — Distribution et Commerce Multisectoriel.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="cgv.html">CGV</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="rgpd.html">RGPD</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
